@@ -6,11 +6,11 @@
         android:icon="@drawable/ic_menu_camera"
         android:title="Anasayfa" />
     <item
-        android:id="@+id/bottonNavHesabim"
+        android:id="@+id/nav_gallery"
         android:icon="@drawable/ic_menu_gallery"
         android:title="Hesabım" />
     <item
-        android:id="@+id/bottonNavOneriler"
+        android:id="@+id/nav_slideshow"
         android:icon="@drawable/ic_menu_slideshow"
         android:title="Öneriler" />
 </menu>

@@ -20,7 +20,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -147,10 +146,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
      */
     private void attemptLogin() {
 
-        Log.i( "Bilgi","Login Öncesi");
        Intent intent = new Intent(this, NavigationDrawer.class);
        startActivity(intent);
-        Log.i( "Bilgi","Login Sonrası");
 
        /*
         if (mAuthTask != null) {
