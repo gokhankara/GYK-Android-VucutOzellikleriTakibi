@@ -84,7 +84,29 @@ public class NavigationDrawer extends AppCompatActivity implements NavigationVie
     };
 
     @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        return false;
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+        Fragment selectedFragment = null;
+
+        int id = item.getItemId();
+
+        if (id == R.id.nav_KiloOranlari) {
+            selectedFragment = new KiloOranlariFragment();
+            // Handle the camera action
+        //} else if (id == R.id.nav_profile) {
+           // selectedFragment = new ProfileFragment();
+       // } else if (id == R.id.nav_logout) {
+           // mAuth.signOut();
+          //  Intent logoutIntent = new Intent(MainActivity.this,LoginActivity.class);
+           // startActivity(logoutIntent);
+        }
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.frame_layout, selectedFragment);
+        transaction.commit();
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+
+        return true;
+       // return false;
     }
 }
